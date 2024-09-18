@@ -12,7 +12,7 @@ Observe the error having an incorrect stack trace:
 
 ```
 Error: Test error
- ❯ Module.u ../node_modules/.pnpm/base32-decode@1.0.0/node_modules/base32-decode/index.js:5:9
+ ❯ Module.foo ../node_modules/.pnpm/base32-decode@1.0.0/node_modules/base32-decode/index.js:5:9
  ❯ index.test.js:5:3
 ```
 
@@ -24,9 +24,8 @@ $ node --enable-source-maps script.js
   throw new Error("Test error");
         ^
 
-
 Error: Test error
-    at u (/Users/dmaretskyi/vitest-sourcemap-bug/pkg-a/index.js:5:9)
+    at foo (/Users/dmaretskyi/vitest-sourcemap-bug/pkg-a/index.js:5:9)
     at file:///Users/dmaretskyi/vitest-sourcemap-bug/pkg-b/script.js:3:1
     at ModuleJob.run (node:internal/modules/esm/module_job:217:25)
     at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
