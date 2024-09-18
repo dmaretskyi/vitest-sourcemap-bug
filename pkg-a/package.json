@@ -1,0 +1,12 @@
+{
+  "name": "pkg-a",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": "./dist.js",
+  "scripts": {
+    "build": "esbuild --bundle index.js --minify --outfile=dist.js --sourcemap --format=esm"
+  },
+  "dependencies": {
+    "base32-decode": "^1.0.0"
+  }
+}
